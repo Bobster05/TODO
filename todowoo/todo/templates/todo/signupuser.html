@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Signup</title>
-</head>
-<body>
+{% extends 'todo/base.html' %}
+{% block content %}
+
 <h1>SignUp</h1>
 <h2>{{ error }}</h2>
 <form method="POST">
@@ -13,5 +9,4 @@
     <button type="submit">Sign UP</button>
 </form>
 
-</body>
-</html>
+{% endblock %}
