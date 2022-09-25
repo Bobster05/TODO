@@ -14,8 +14,8 @@ Logged in as {{ user.username }}
 </form>
 
 {% else %}
-<a href="#">SignUp</a>
-<a href="#">Login</a>
+<a href="{% url 'signupuser' %}">SignUp</a>
+<a href="{% url 'loginuser' %}">Login</a>
 {% endif %}
 {% block content %}{% endblock %}
 </body>
