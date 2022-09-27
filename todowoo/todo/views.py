@@ -30,6 +30,7 @@ def signupuser(request):
             return render(request, 'todo/signupuser.html',
                           {'form': UserCreationForm(), 'error': "Password didn't match"})
 
+
 @login_required
 def currenttodos(request):
     todos = Todo.objects.filter(user=request.user, datecomleted__isnull=True)

@@ -1,7 +1,6 @@
 """todowoo URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
+    https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -18,13 +17,14 @@ from django.urls import path
 from todo import views
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-#   auth
-    path('signup/', views.signupuser, name='signupuser'),
-    path('logout/', views.logoutuser, name='logoutuser'),
-    path('login/', views.loginuser, name='loginuser'),
+    path('admin/', admin.site.urls),
 
-    #   todos
+    # Auth
+    path('signup/', views.signupuser, name='signupuser'),
+    path('login/', views.loginuser, name='loginuser'),
+    path('logout/', views.logoutuser, name='logoutuser'),
+
+    # Todos
     path('', views.home, name='home'),
     path('create/', views.createtodo, name='createtodo'),
     path('current/', views.currenttodos, name='currenttodos'),
